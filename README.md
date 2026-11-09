@@ -16,6 +16,7 @@ The website of Nir Hermelin, fingerstyle guitar. It's a plain static site: HTML,
 | `guitar.jpg` | Guitar-with-mushrooms art; shows if the video can't play, and the Lessons page header |
 | `portrait.jpg` | Nir's photo next to Bandcamp (**still to be added**, see below) |
 | `music/` | The four MP3s for the bottom player |
+| `favicon.svg`, `favicon.ico`, `apple-touch-icon.png` | The ampersand icon in the browser tab and on phone home screens |
 | `vercel.json` | Lets pages open without `.html` (e.g. `nirmusic.com/events`) |
 
 ## How to change things
