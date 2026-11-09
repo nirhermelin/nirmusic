@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="pages.css">
 </head>
-<body>
+<body data-page="lessons">
 <div class="grain"></div>
 <div class="bg"></div>
 <div class="content">
@@ -85,12 +85,13 @@
 <section class="wrap block csec" id="contact">
   <div class="klabel">Say hello</div>
   <h2>Get in touch</h2>
-  <div class="contact">
-    <input type="text" placeholder="Name" aria-label="Name">
-    <input type="email" placeholder="Email" aria-label="Email">
-    <textarea placeholder="Message" aria-label="Message"></textarea>
-    <button class="btn" type="button" onclick="alert('Contact form will be wired up next.')">Send</button>
-  </div>
+  <form class="contact" data-form="contact">
+    <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
+    <input type="text" name="name" placeholder="Name" aria-label="Name" maxlength="120">
+    <input type="email" name="email" placeholder="Email" aria-label="Email" required maxlength="200">
+    <textarea name="message" placeholder="Message" aria-label="Message" required maxlength="5000"></textarea>
+    <button class="btn" type="submit">Send</button>
+  </form>
 </section>
 
 <footer class="foot">
@@ -104,4 +105,5 @@
 </footer>
 </div>
 <script src="player.js"></script>
+<script src="forms.js"></script>
 </body></html>

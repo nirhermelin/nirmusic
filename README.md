@@ -17,6 +17,8 @@ The website of Nir Hermelin, fingerstyle guitar. It's a plain static site: HTML,
 | `portrait.jpg` | Nir's photo next to Bandcamp (**still to be added**, see below) |
 | `music/` | The four MP3s for the bottom player |
 | `favicon.svg`, `favicon.ico`, `apple-touch-icon.png` | The ampersand icon in the browser tab and on phone home screens |
+| `forms.js` | Sends the signup and contact forms to `api/contact.js` |
+| `api/contact.js` | Emails each form to music@nirhermelin.com through Resend |
 | `vercel.json` | Lets pages open without `.html` (e.g. `nirmusic.com/events`) |
 
 ## How to change things
@@ -40,8 +42,15 @@ Every change works the same way: open the file on GitHub, click the pencil icon,
 ## Still to do
 
 - **`portrait.jpg`**: save the photo from the current nirmusic.com and upload it here with exactly that name. Until then the page borrows it from Bandzoogle, and it will disappear when Bandzoogle is cancelled.
-- **Forms:** the mailing-list signup and the contact forms only show a message for now. They still need to be connected to an email service.
 - **Domain:** in Vercel, open Settings → Domains, add `nirmusic.com`, and copy the DNS records it shows into the domain registrar. Cancel Bandzoogle only after nirmusic.com shows the new site.
+
+## Forms and email (Resend)
+
+The signup boxes and the "Get in touch" forms on all three pages send to `api/contact.js`, which emails them to **music@nirhermelin.com** through Resend. Replies go straight to the visitor's email address. The emails come from `website@nirhermelin.com` (the nirhermelin.com domain must stay verified in Resend).
+
+- **API key:** set in Vercel → Settings → Environment Variables as `RESEND_API_KEY`. Never put it in any file here.
+- **Optional:** `CONTACT_TO` sends to another address and `CONTACT_FROM` changes the sender. After changing a variable, go to Deployments → ⋯ → Redeploy.
+- Signups currently arrive as one email each. A proper mailing list can be added later.
 
 ## Setup reference
 

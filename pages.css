@@ -52,6 +52,9 @@ h2 em{font-style:italic;color:var(--amber-lt)}
 .leaflist b{color:var(--cream);font-weight:600}
 
 /* contact */
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+.fstatus{margin:0;font-size:13.5px;color:var(--amber-lt);min-height:1em}
+.fstatus:empty{display:none}
 .csec{text-align:center}
 .csec h2{margin-top:4px}
 .contact{max-width:560px;margin:24px auto 0;display:flex;flex-direction:column;gap:12px}
