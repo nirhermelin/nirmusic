@@ -6,9 +6,10 @@
   var wrap=document.createElement('div');
   wrap.innerHTML = "<div class=\"nowbar\" id=\"nowbar\">\n  <div class=\"nbctrls\">\n    <button class=\"nbbtn\" id=\"nbprev\" aria-label=\"Previous\"><svg viewBox=\"0 0 24 24\"><path d=\"M7 5v14M20 5v14l-11-7z\"/></svg></button>\n    <button class=\"nbplay\" id=\"nbplay\" aria-label=\"Play/pause\"></button>\n    <button class=\"nbbtn\" id=\"nbnext\" aria-label=\"Next\"><svg viewBox=\"0 0 24 24\"><path d=\"M17 5v14M4 5v14l11-7z\"/></svg></button>\n  </div>\n  <div class=\"nbinfo\"><div class=\"nbt\" id=\"nbt\"></div><div class=\"nbs\">unreleased \u00b7 Nir Music</div></div>\n  <div class=\"nbprog\" id=\"nbprog\"><div class=\"nbfill\" id=\"nbfill\"></div></div>\n  <div class=\"nbtime\" id=\"nbtime\">0:00 / 0:00</div>\n  <div class=\"nbvol\">\n    <svg class=\"nbvolic\" viewBox=\"0 0 24 24\"><path d=\"M4 9v6h4l5 4V5L8 9H4z\"/><path d=\"M16 8.5a4 4 0 0 1 0 7\" fill=\"none\" stroke-width=\"1.8\"/></svg>\n    <input class=\"nbvolsl\" id=\"nbvol\" type=\"range\" min=\"0\" max=\"1\" step=\"0.01\" value=\"0.9\" aria-label=\"Volume\">\n  </div>\n</div>\n<audio id=\"ap\" preload=\"metadata\"></audio>\n";
   while(wrap.firstChild) document.body.appendChild(wrap.firstChild);
-  /* ALWAYS-ON bottom player — four unreleased tracks, prev/play/next, seek, volume.
+  /* ALWAYS-ON bottom player — unreleased tracks, prev/play/next, seek, volume.
      Add each track's MP3 URL to `src` below and it plays; empty src = UI only. */
   var TRACKS=[
+    {title:"Middle East Song (Extended Intro)",                  src:"music/middle-east-song-extended-intro.mp3"},
     {title:"I Sat Down and the Journey Started",                 src:"music/i-sat-down-and-the-journey-started.mp3"},
     {title:"Abba'le",                                            src:"music/abbale.mp3"},
     {title:"Middle East Song (Original Release)",                src:"music/middle-east-song.mp3"},
